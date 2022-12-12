@@ -3,7 +3,7 @@ import React from 'react'
 import { Table, Badge } from 'reactstrap'
 import image from './image/img1.jpg'
 import { Model } from './Model'
-
+// For forms use formik
 export function KunddliList() {
     const [tableData, setTableData] = React.useState([])
     const [dataModal, setModalData] = React.useState(null)
@@ -41,7 +41,7 @@ export function KunddliList() {
                                 <th>Age</th>
                                 <th>qualification</th>
                                 <th>fatherName</th>
-                                <th style={{ whiteSpace:"nowrap" }}>F-name</th>
+                                <th style={{ whiteSpace: "nowrap" }}>F-name</th>
                                 <th style={{ whiteSpace: "nowrap" }}>F-age</th>
                                 <th style={{ whiteSpace: "nowrap" }}>F-qualification</th>
                                 <th style={{ whiteSpace: "nowrap" }}>F-fathername</th>
@@ -53,8 +53,8 @@ export function KunddliList() {
                         <tbody>
                             {tableData.map((o) => {
                                 return <tr>
-                                    <td><img style={{borderRadius:"1rem"}} src={image} alt='no img' width="25px" /></td>
-                                    <td><img  style={{borderRadius:"1rem"}} src={image} alt='no img' width="25px" /></td>
+                                    <td><img style={{ borderRadius: "1rem" }} src={image} alt='no img' width="25px" /></td>
+                                    <td><img style={{ borderRadius: "1rem" }} src={image} alt='no img' width="25px" /></td>
                                     <th scope="row">{o.id}</th>
                                     <td>{o.Mname}</td>
                                     <td>{o.Mage}</td>
@@ -67,9 +67,9 @@ export function KunddliList() {
                                     {/* {o.status+''} */}
                                     <td>{
                                         o.status ?
-                                        <Badge color="success"> matched</Badge>
-                                        :
-                                        <Badge color="danger">not matched</Badge>
+                                            <Badge color="success"> matched</Badge>
+                                            :
+                                            <Badge color="danger">not matched</Badge>
                                     }
 
                                     </td>
